@@ -1,9 +1,9 @@
 <template>
   <div class="flex h-screen w-screen">
-    <div class="w-2/12 border-r-2">
+    <div class="w-2/12 border-r border-gray-500 overflow-x-hidden">
       <Sidebar />
     </div>
-    <div class="flex-grow">
+    <div class="flex-grow overflow-auto hide-scroll-bar">
       <router-view />
     </div>
   </div>
@@ -20,3 +20,13 @@ import Sidebar from "@/components/Sidebar.vue";
 })
 export default class App extends Vue {}
 </script>
+
+<style>
+.hide-scroll-bar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none;
+}
+</style>
