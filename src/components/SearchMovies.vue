@@ -30,9 +30,9 @@
           />
         </svg>
         <div
-          class="absolute w-5 h-5 rounded-full bg-red-500 text-white top-0 right-0 mt-1 mr-2 flex items-center justify-center group-hover:animate"
+          class="absolute w-4 h-4 rounded-full bg-red-500 text-white top-0 right-0 mt-2 mr-3 flex items-center justify-center text-xs"
         >
-          <div>4</div>
+          <div class="">4</div>
         </div>
       </div>
     </div>

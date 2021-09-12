@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white rounded-2xl p-5 col-span-4">
+  <div class="bg-white rounded-2xl p-5">
     <div class="flex items-center justify-between">
       <!-- heading -->
       <div>
@@ -35,15 +35,19 @@
     <div class="mt-7">
       <div class="divide-y divide-gray-200 divide-solid ">
         <!-- movie component -->
-        <div class="flex justify-between items-center py-2">
+        <div class="flex justify-between items-center py-3">
           <div class="flex space-x-5 items-center">
-            <div class="h-20 w-20 bg-indigo-500 rounded-xl"></div>
+            <img
+              src="@/assets/img/Avengers_Endgame_poster.jpg"
+              alt=""
+              class="object-cover object-top h-24 w-24 rounded-xl"
+            />
             <div>
               <div class="font-bold text-gray-700 text-lg">
                 Avengers: End Game
               </div>
               <div class="flex items-center mt-2 space-x-4">
-                <div class="flex space-x-1">
+                <div class="flex space-x-1 items-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-6 w-6 text-gray-500"
@@ -62,7 +66,7 @@
                     >1hr 2min</span
                   >
                 </div>
-                <div class="flex space-x-1">
+                <div class="flex space-x-1 items-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-6 w-6 text-gray-500"
@@ -120,15 +124,19 @@
         </div>
 
         <!-- movie component 2 -->
-        <div class="flex justify-between items-center py-2">
+        <div class="flex justify-between items-center py-3">
           <div class="flex space-x-5 items-center">
-            <div class="h-20 w-20 bg-indigo-500 rounded-xl"></div>
+            <img
+              src="@/assets/img/TheAvengers2012Poster.jpg"
+              alt=""
+              class="object-cover object-top h-24 w-24 rounded-xl"
+            />
             <div>
               <div class="font-bold text-gray-700 text-lg">
                 The Avengers
               </div>
               <div class="flex items-center mt-2 space-x-4">
-                <div class="flex space-x-1">
+                <div class="flex space-x-1 items-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-6 w-6 text-gray-500"
@@ -147,7 +155,7 @@
                     >1hr 2min</span
                   >
                 </div>
-                <div class="flex space-x-1">
+                <div class="flex space-x-1 items-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-6 w-6 text-gray-500"
