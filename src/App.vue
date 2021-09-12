@@ -1,24 +1,24 @@
 <template>
   <div class="flex h-screen w-screen">
-    <div class="w-2/12 border-r border-gray-500 overflow-x-hidden">
+    <div class="w-56 overflow-x-hidden py-3 px-3">
       <Sidebar />
     </div>
-    <div class="flex-grow overflow-auto hide-scroll-bar">
+    <div class="flex-grow overflow-auto hide-scroll-bar py-3">
       <router-view />
     </div>
+    <div class="w-64 py-5 px-3"></div>
   </div>
 </template>
 
 <script lang="ts">
-import { Options, Vue } from "vue-class-component";
 import Sidebar from "@/components/Sidebar.vue";
 
-@Options({
+export default {
+  name: "cinema-app",
   components: {
     Sidebar,
   },
-})
-export default class App extends Vue {}
+};
 </script>
 
 <style>
