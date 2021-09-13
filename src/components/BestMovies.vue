@@ -36,12 +36,14 @@
       <div class="divide-y divide-gray-200 divide-solid ">
         <!-- movie component -->
         <div class="flex justify-between items-center py-3">
-          <div class="flex space-x-5 items-center">
-            <img
-              src="@/assets/img/Avengers_Endgame_poster.jpg"
-              alt=""
-              class="object-cover object-top h-28 w-28 rounded-xl"
-            />
+          <div class="flex space-x-5 items-center ">
+            <div class="">
+              <img
+                src="@/assets/img/Avengers_Endgame_poster.jpg"
+                alt=""
+                class="object-cover object-top h-28 w-28 rounded-xl cursor-pointer"
+              />
+            </div>
             <div>
               <div class="font-bold text-gray-700 text-lg">
                 Avengers: End Game

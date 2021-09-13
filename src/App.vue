@@ -6,17 +6,21 @@
     <div class="flex-grow overflow-auto hide-scroll-bar py-3">
       <router-view />
     </div>
-    <div class="w-56 flex-none py-5 px-3"></div>
+    <div class="w-60 overflow-x-hidden py-3 px-3 flex-none">
+      <FriendActivity />
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import Sidebar from "@/components/Sidebar.vue";
+import FriendActivity from "@/components/FriendActivity.vue";
 
 export default {
   name: "cinema-app",
   components: {
     Sidebar,
+    FriendActivity,
   },
 };
 </script>
