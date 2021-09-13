@@ -19,7 +19,7 @@
       <div
         class="p-3 cursor-pointer hover:bg-indigo-500 hover:text-white font-medium rounded-md duration-200 text-lg"
       >
-        comming soon
+        Coming Soon
       </div>
     </div>
   </div>
