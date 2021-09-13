@@ -32,7 +32,7 @@
     </div>
 
     <!-- movies list -->
-    <div class="mt-7">
+    <div class="mt-6">
       <div class="divide-y divide-gray-200 divide-solid ">
         <!-- movie component -->
         <div class="flex justify-between items-center py-3">
@@ -40,17 +40,17 @@
             <img
               src="@/assets/img/Avengers_Endgame_poster.jpg"
               alt=""
-              class="object-cover object-top h-24 w-24 rounded-xl"
+              class="object-cover object-top h-28 w-28 rounded-xl"
             />
             <div>
               <div class="font-bold text-gray-700 text-lg">
                 Avengers: End Game
               </div>
-              <div class="flex items-center mt-2 space-x-4">
+              <div class="flex items-center mt-3 space-x-4">
                 <div class="flex space-x-1 items-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6 text-gray-500"
+                    class="h-5 w-5 text-gray-500"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -69,7 +69,7 @@
                 <div class="flex space-x-1 items-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6 text-gray-500"
+                    class="h-5 w-5 text-gray-500"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -129,17 +129,17 @@
             <img
               src="@/assets/img/TheAvengers2012Poster.jpg"
               alt=""
-              class="object-cover object-top h-24 w-24 rounded-xl"
+              class="object-cover object-top h-28 w-28 rounded-xl"
             />
             <div>
               <div class="font-bold text-gray-700 text-lg">
                 The Avengers
               </div>
-              <div class="flex items-center mt-2 space-x-4">
+              <div class="flex items-center mt-3 space-x-4">
                 <div class="flex space-x-1 items-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6 text-gray-500"
+                    class="h-5 w-5 text-gray-500"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -158,7 +158,7 @@
                 <div class="flex space-x-1 items-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6 text-gray-500"
+                    class="h-5 w-5 text-gray-500"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
