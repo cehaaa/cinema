@@ -41,16 +41,11 @@ export default {
       type: Boolean,
     },
   },
+
   setup(props, context) {
     const closeAlert = () => {
       context.emit("closeAlert");
     };
-
-    if (props.isAlerted) {
-      setTimeout(() => {
-        console.log("close alert function is running");
-      }, 1000);
-    }
 
     return {
       closeAlert,

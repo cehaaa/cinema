@@ -28,7 +28,7 @@
       <div>
         <button
           class="p-1 rounded-md hover:bg-indigo-500 group hover:bg-opacity-30 duration-200"
-          @click="isAlerted = true"
+          @click="openAlert"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -63,24 +63,37 @@ export default {
     Alert,
   },
   setup(props, context) {
+    // ANCHOR : Variable
     const store = useStore();
-
     const isAlerted = ref(false);
-
-    const closeAlert = () => {
-      isAlerted.value = false;
-    };
-
     const friendState = computed(() => {
       return {
         friendSuggestions: store.getters.friendSuggestions,
       };
     });
 
+    // ANCHOR: Method
+    const openAlert = () => {
+      isAlerted.value = true;
+
+      autoCloseAlert();
+    };
+
+    const closeAlert = () => {
+      isAlerted.value = false;
+    };
+
+    const autoCloseAlert = () => {
+      setTimeout(() => {
+        closeAlert();
+      }, 2500);
+    };
+
     return {
       friendState,
       isAlerted,
 
+      openAlert,
       closeAlert,
     };
   },
