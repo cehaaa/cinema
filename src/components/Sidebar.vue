@@ -27,11 +27,6 @@
 
 <script lang="ts">
 export default {
-  name: "Sidebar",
-
-  setup() {
-    const name = "nama";
-    console.log("name");
-  },
+  name: "Sidebar",  
 };
 </script>

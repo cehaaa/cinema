@@ -48,7 +48,7 @@
       </div>
     </div>
 
-    <Alert :isAlerted="isAlerted" />
+    <Alert :isAlerted="isAlerted" @closeAlert="closeAlert" />
   </div>
 </template>
 
@@ -67,6 +67,10 @@ export default {
 
     const isAlerted = ref(false);
 
+    const closeAlert = () => {
+      isAlerted.value = false;
+    };
+
     const friendState = computed(() => {
       return {
         friendSuggestions: store.getters.friendSuggestions,
@@ -76,6 +80,8 @@ export default {
     return {
       friendState,
       isAlerted,
+
+      closeAlert,
     };
   },
 };

@@ -2,7 +2,21 @@ module.exports = {
   purge: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        fadeLeft: "fadeLeft 0.3s linear",
+      },
+      keyframes: {
+        fadeLeft: {
+          "0%": {
+            right: "-20rem",
+          },
+          "100%": {
+            right: "0",
+          },
+        },
+      },
+    },
   },
   variants: {
     extend: {
