@@ -9,11 +9,12 @@
       <div class="flex items-center space-x-3">
         <div class="relative">
           <div class="bg-indigo-500 rounded-full overflow-hidden">
-            <img
+            <!-- <img
               :src="'http://localhost:8080/img/' + friend.profile_image"
               alt=""
               class="object-cover object-top w-11 h-11"
-            />
+            /> -->
+            <div class="w-11 h-11 bg-gray-400"></div>
           </div>
           <div
             :class="{

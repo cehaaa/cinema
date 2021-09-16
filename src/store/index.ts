@@ -10,21 +10,31 @@ export default createStore({
       },
       {
         name : "Jhon",
-        profile_image : "220px-Ant-Man_poster.jpg",
+        profile_image : "TheAvengers2012Poster.jpg",
         online_status : false
       }
     ],
     friendSuggestions : [
       {
-        name : "Luigi",
+        name : "Mikey",
         profile_image : "220px-Ant-Man_poster.jpg",
         online_status : true
       },
       {
-        name : "Jhon",
+        name : "Kazutora",
         profile_image : "220px-Ant-Man_poster.jpg",
         online_status : false
-      }
+      },
+      {
+        name : "Luffy",
+        profile_image : "220px-Ant-Man_poster.jpg",
+        online_status : true
+      },
+      {
+        name : "Kobayasi",
+        profile_image : "220px-Ant-Man_poster.jpg",
+        online_status : false
+      },    
     ]    
   },
   getters : {

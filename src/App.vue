@@ -6,7 +6,7 @@
     <div class="flex-grow overflow-auto hide-scroll-bar py-3">
       <router-view />
     </div>
-    <div class="w-60 overflow-x-hidden py-3 px-3 flex-none">
+    <div class="w-60 overflow-x-hidden py-3 px-3 flex-none hide-scroll-bar">
       <FriendActivity />
     </div>
   </div>
