@@ -1,4 +1,6 @@
 import { createStore } from 'vuex'
+import {moviesStore} from './movies'
+import {usersStore} from './users'
 
 export default createStore({
   state: {
@@ -51,5 +53,7 @@ export default createStore({
   actions: {
   },
   modules: {
+    "movies-store" : moviesStore,
+    "users-store": usersStore
   }
 })
