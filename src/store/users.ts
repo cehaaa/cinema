@@ -1,9 +1,9 @@
 import axios from 'axios'
 export const usersStore = {
   namespaced : true,
-  state : () => {
+  state : () => ({
     users : []
-  },
+  }),
   getters: {
     users(state:any){
       return state.users

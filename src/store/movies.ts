@@ -1,11 +1,12 @@
 import axios from 'axios'
+
 export const moviesStore = {
   namespaced : true,
   state : () => ({ 
     movies : []
   }),
   getters : {
-    name(state: any) {
+    movies(state: any) {
       return state.movies
     }
   },
@@ -15,8 +16,12 @@ export const moviesStore = {
     }
   },
   actions : {
-    fetchMovies( {commit} :any ){
-      axios.get('/movies')
+    fetchMovies( {commit} :any, queryParams: any){
+      axios.get('/movies', {
+        params: {
+          ...queryParams
+        }
+      })
         .then(res => {
           commit('SET_MOVIES', res.data)
         })
