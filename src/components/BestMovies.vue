@@ -153,12 +153,10 @@ export default {
     const store = useStore();
 
     onMounted(() => {
-      store.dispatch("movies-store/fetchMovies", {
-        is_best_movies: true,
-      });
+      store.dispatch("movies-store/fetchBestMovies");
     });
 
-    const movies = computed(() => store.getters["movies-store/movies"]);
+    const movies = computed(() => store.getters["movies-store/bestMovies"]);
 
     return { movies };
   },
