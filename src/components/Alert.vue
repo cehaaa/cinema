@@ -1,14 +1,20 @@
 <template>
   <div>
     <div
-      class="fixed bg-indigo-400 top-0 mr-3 mt-3 w-72 px-3 py-4 rounded-md text-white duration-200 border-l-8 border-indigo-500"
+      class="fixed top-0 mr-3 mt-3 w-72 px-3 py-4 rounded-md text-white duration-200 border-l-8 "
       :class="{
+        'bg-red-400': status === 'danger',
+        'bg-indigo-400': status === 'primary',
+
+        'border-red-500': status === 'danger',
+        'border-indigo-500': status === 'primary',
+
         'animate-fadeLeft, right-0': isAlerted,
         '-right-80': !isAlerted,
       }"
     >
       <div class="flex justify-between items-center">
-        <div class="font-medium text-lg">Invitation sent 💌</div>
+        <div class="font-medium text-lg">{{ message }}</div>
         <button
           class="p-1 rounded-md hover:bg-white group hover:bg-opacity-30 duration-200"
           @click="closeAlert"
@@ -39,6 +45,12 @@ export default {
   props: {
     isAlerted: {
       type: Boolean,
+    },
+    status: {
+      type: String,
+    },
+    message: {
+      type: String,
     },
   },
 

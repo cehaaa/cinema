@@ -49,7 +49,12 @@
       </div>
     </div>
 
-    <Alert :isAlerted="isAlerted" @closeAlert="closeAlert" />
+    <Alert
+      :isAlerted="isAlerted"
+      status="primary"
+      message="Invitation sent 💌"
+      @closeAlert="closeAlert"
+    />
   </div>
 </template>
 

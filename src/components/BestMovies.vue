@@ -140,17 +140,31 @@
         >Find more</a
       >
     </div>
+
+    <Alert
+      :isAlerted="isAlerted"
+      :status="status"
+      message="Network Error 👽"
+      @closeAlert="closeAlert"
+    />
   </div>
 </template>
 
 <script>
 import { ref, onMounted, computed } from "vue";
 import { useStore } from "vuex";
+import Alert from "@/components/Alert.vue";
 
 export default {
   name: "best-movies",
+  components: {
+    Alert,
+  },
   setup() {
     const store = useStore();
+
+    const isAlerted = ref(false);
+    const status = ref("danger");
 
     onMounted(() => {
       store.dispatch("movies-store/fetchBestMovies");
@@ -158,7 +172,19 @@ export default {
 
     const movies = computed(() => store.getters["movies-store/bestMovies"]);
 
-    return { movies };
+    const closeAlert = () => {
+      isAlerted.value = false;
+    };
+
+    const autoCloseAlert = () => {
+      setTimeout(() => {
+        closeAlert();
+      }, 2500);
+    };
+
+    autoCloseAlert();
+
+    return { movies, status, isAlerted, closeAlert };
   },
 };
 </script>
