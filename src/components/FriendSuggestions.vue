@@ -3,28 +3,28 @@
     <div class="font-medium">People you may know</div>
     <div
       class="border p-3 rounded-xl flex items-center justify-between"
-      v-for="friend in friendState.friendSuggestions"
-      :key="friend"
+      v-for="user in suggestedFriends"
+      :key="user.id"
     >
       <div class="flex items-center space-x-3">
         <div class="relative">
-          <div class="bg-indigo-500 rounded-full overflow-hidden">
-            <!-- <img
-              :src="'http://localhost:8080/img/' + friend.profile_image"
-              alt=""
+          <div class="rounded-full overflow-hidden">
+            <img
+              :src="
+                'http://localhost:3000/storage/profile/' + user.profile_image
+              "
               class="object-cover object-top w-11 h-11"
-            /> -->
-            <div class="w-11 h-11 bg-gray-400"></div>
+            />
           </div>
           <div
             :class="{
-              'bg-green-400': friend.online_status,
-              'bg-red-500': !friend.online_status,
+              'bg-green-400': user.online_status,
+              'bg-red-500': !user.online_status,
             }"
             class="w-3 h-3 rounded-full bottom-0 right-0 mt-1 ml-5 absolute"
           ></div>
         </div>
-        <div class="font-medium text-lg">{{ friend.name }}</div>
+        <div class="font-medium text-lg">{{ user.name }}</div>
       </div>
       <div>
         <button
@@ -54,7 +54,7 @@
 </template>
 
 <script>
-import { ref, computed } from "vue";
+import { ref, computed, onMounted } from "vue";
 import { useStore } from "vuex";
 import Alert from "@/components/Alert.vue";
 
@@ -67,16 +67,18 @@ export default {
     // ANCHOR : Variable
     const store = useStore();
     const isAlerted = ref(false);
-    const friendState = computed(() => {
-      return {
-        friendSuggestions: store.getters.friendSuggestions,
-      };
+
+    onMounted(() => {
+      store.dispatch("users-store/fetchSuggestedFriends");
     });
+
+    const suggestedFriends = computed(
+      () => store.getters["users-store/suggestedFriends"]
+    );
 
     // ANCHOR: Method
     const openAlert = () => {
       isAlerted.value = true;
-
       autoCloseAlert();
     };
 
@@ -91,7 +93,7 @@ export default {
     };
 
     return {
-      friendState,
+      suggestedFriends,
       isAlerted,
 
       openAlert,

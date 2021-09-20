@@ -3,21 +3,23 @@
     <div>
       <div class="text-lg font-medium px-3 pt-8">Friends</div>
       <div class="text-sm text-gray-500 px-3 mt-1 ">
-        3 Friends on Cinema 🎉
+        {{ friends.length }} Friends on Cinema 🎉
       </div>
     </div>
     <div class="flex flex-col space-y-2">
       <div
         class="border p-3 rounded-xl flex items-center justify-between"
-        v-for="friend in friendState.friends"
+        v-for="friend in friends"
         :key="friend"
       >
         <div class="flex items-center space-x-3">
           <div class="relative">
-            <div class="bg-indigo-500 rounded-full overflow-hidden">
+            <div class="rounded-full overflow-hidden">
               <img
-                :src="'http://localhost:8080/img/' + friend.profile_image"
-                alt=""
+                :src="
+                  'http://localhost:3000/storage/profile/' +
+                    friend.profile_image
+                "
                 class="object-cover object-top w-11 h-11"
               />
             </div>
@@ -58,27 +60,26 @@
 </template>
 
 <script>
-import { ref, computed } from "vue";
+import { computed, onMounted } from "vue";
 import { useStore } from "vuex";
-import FriendSuggestions from '@/components/FriendSuggestions.vue'
+import FriendSuggestions from "@/components/FriendSuggestions.vue";
 
 export default {
   name: "friend-activity",
-  components : {
-    FriendSuggestions
+  components: {
+    FriendSuggestions,
   },
   setup(props, context) {
     const store = useStore();
 
-    const friendState = computed(() => {
-      return {
-        friends: store.getters.friends,
-        friendSuggestions: store.getters.friendSuggestions,
-      };
+    onMounted(() => {
+      store.dispatch("users-store/fetchFriends");
     });
 
+    const friends = computed(() => store.getters["users-store/friends"]);
+
     return {
-      friendState,
+      friends,
     };
   },
 };
