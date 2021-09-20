@@ -1,6 +1,8 @@
-# cinema
+# Cinema
 
 ## Project setup
+[Clone API repository first ⚡](https://github.com/veeloo/cinema-server).
+
 ```
 npm install
 ```
