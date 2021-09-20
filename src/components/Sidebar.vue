@@ -6,11 +6,13 @@
       Cinema
     </div>
     <div class="flex flex-col space-y-3">
-      <div
+      <router-link
+        to="/"
         class="p-3 cursor-pointer hover:bg-indigo-500 hover:text-white font-medium rounded-md duration-200 text-lg"
+        :class="{ 'bg-indigo-500 , text-white': checkRouteName() === 'Home' }"
       >
         Home
-      </div>
+      </router-link>
       <div
         class="p-3 cursor-pointer hover:bg-indigo-500 hover:text-white font-medium rounded-md duration-200 text-lg"
       >
@@ -26,7 +28,12 @@
 </template>
 
 <script lang="ts">
+import { checkRouteName } from "@/utils/utils";
+
 export default {
-  name: "Sidebar",  
+  name: "Sidebar",
+  setup() {
+    return { checkRouteName };
+  },
 };
 </script>
