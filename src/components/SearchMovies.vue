@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center justify-between">
+  <div class="flex items-center justify-between w-full">
     <div>
       <div class="text-3xl font-bold">Hello, {{ username }}! 👋</div>
       <div class="text-gray-500 mt-2 tracking-wide">
@@ -12,8 +12,9 @@
         class="rounded-full px-5 w-64 py-3 outline-none focus:ring-4 ring-indigo-500 ring-opacity-20 duration-200"
         placeholder="Search Movies..."
       />
-      <div
+      <button
         class="rounded-full bg-white p-3 flex items-center justify group cursor-pointer relative"
+        @click="showNotificationModal"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -32,22 +33,45 @@
         <div
           class="absolute w-4 h-4 rounded-full bg-red-500 text-white top-0 right-0 mt-2 mr-3 flex items-center justify-center text-xs"
         >
-          <div class="">4</div>
+          <div>3</div>
         </div>
-      </div>
+      </button>
     </div>
+
+    <NotificationModal
+      :isShow="isShow"
+      @closeNotificationModal="closeNotificationModal"
+    />
   </div>
 </template>
 
 <script>
 import { ref } from "vue";
+import NotificationModal from "@/components/NotificationModal.vue";
 
 export default {
   name: "search",
+  components: {
+    NotificationModal,
+  },
   setup() {
     const username = ref("Jeremy");
+    const isShow = ref(false);
+
+    const showNotificationModal = () => {
+      isShow.value = true;
+    };
+
+    const closeNotificationModal = () => {
+      isShow.value = false;
+    };
+
     return {
+      isShow,
       username,
+
+      showNotificationModal,
+      closeNotificationModal,
     };
   },
 };
