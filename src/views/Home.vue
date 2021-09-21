@@ -1,5 +1,5 @@
 <template>
-  <div class="rounded-xl border-black bg-indigo-50 py-8 px-5">
+  <div class="rounded-xl bg-indigo-50 py-8 px-5">
     <SearchMovies />
     <div class=" mt-10">
       <BestMovies />
