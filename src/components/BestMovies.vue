@@ -4,7 +4,7 @@
       <!-- heading -->
       <div>
         <div class="text-2xl font-semibold">Best Movies 🎬</div>
-        <div class="text-gray-500 tracking-wide mt-2">
+        <div class="text-gray-500 mt-2">
           100+ Movies found.
         </div>
       </div>

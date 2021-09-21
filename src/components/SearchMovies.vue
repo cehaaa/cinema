@@ -2,7 +2,7 @@
   <div class="flex items-center justify-between w-full">
     <div>
       <div class="text-3xl font-bold">Hello, {{ username }}! 👋</div>
-      <div class="text-gray-500 mt-2 tracking-wide">
+      <div class="text-gray-500 mt-2">
         Welcome back and explore the movie.
       </div>
     </div>
