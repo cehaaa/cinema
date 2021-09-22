@@ -32,6 +32,7 @@
             >
               <button
                 class="rounded-full h-10 w-10 p-1 bg-indigo-500 flex items-center justify-center hover:bg-indigo-600 duration-200"
+                @click="openAlert"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -102,15 +103,25 @@
         </div>
       </div>
     </div>
+    <Alert
+      :isAlerted="isAlerted"
+      status="success"
+      :message="'Added to watch letter 😎'"
+      @closeAlert="closeAlert"
+    />
   </div>
 </template>
 
 <script>
 import { ref, onMounted, computed } from "vue";
 import { useStore } from "vuex";
+import Alert from "@/components/Alert";
 
 export default {
   name: "now-showing",
+  components: {
+    Alert,
+  },
   setup() {
     const store = useStore();
 
@@ -122,7 +133,24 @@ export default {
       () => store.getters["movies-store/onShowingMovies"]
     );
 
-    return { movies };
+    const isAlerted = ref(false);
+
+    const openAlert = () => {
+      isAlerted.value = true;
+      autoCloseAlert();
+    };
+
+    const closeAlert = () => {
+      isAlerted.value = false;
+    };
+
+    const autoCloseAlert = () => {
+      setTimeout(() => {
+        closeAlert();
+      }, 2500);
+    };
+
+    return { movies, isAlerted, openAlert, closeAlert };
   },
 };
 </script>
