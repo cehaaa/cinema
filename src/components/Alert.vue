@@ -5,9 +5,11 @@
       :class="{
         'bg-red-400': status === 'danger',
         'bg-indigo-400': status === 'primary',
+        'bg-green-400': status === 'success',
 
         'border-red-500': status === 'danger',
         'border-indigo-500': status === 'primary',
+        'border-green-400': status === 'success',
 
         'animate-fadeLeft, right-0': isAlerted,
         '-right-80': !isAlerted,
