@@ -1,4 +1,6 @@
 import { createStore } from 'vuex'
+
+import {appStore} from './app'
 import {moviesStore} from './movies'
 import {usersStore} from './users'
 
@@ -13,7 +15,7 @@ export default createStore({
   },
   modules: {
     "movies-store" : moviesStore,
-    "users-store": usersStore
-    
+    "users-store": usersStore,
+    "app-store" : appStore,
   }
 })

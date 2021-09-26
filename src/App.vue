@@ -6,7 +6,10 @@
     <div class="flex-grow overflow-auto hide-scroll-bar py-3">
       <router-view />
     </div>
-    <div class="w-60 overflow-x-hidden py-3 px-3 flex-none hide-scroll-bar">
+    <div
+      class="w-60 overflow-x-hidden py-3 px-3 flex-none hide-scroll-bar duration-200"
+      v-if="rightSidebar"
+    >
       <FriendActivity />
     </div>
   </div>
@@ -16,11 +19,22 @@
 import Sidebar from "@/components/Sidebar.vue";
 import FriendActivity from "@/components/FriendActivity.vue";
 
+import { computed } from "vue";
+import { useStore } from "vuex";
+
 export default {
   name: "cinema-app",
   components: {
     Sidebar,
     FriendActivity,
+  },
+  setup() {
+    const store = useStore();
+    const rightSidebar = computed(
+      () => store.getters["app-store/rightSidebar"]
+    );
+
+    return { rightSidebar };
   },
 };
 </script>
