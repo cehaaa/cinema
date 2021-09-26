@@ -28,11 +28,12 @@
       >
         Popular Now
       </div>
-      <div
+      <router-link
+        to="/profile"
         class="p-3 cursor-pointer hover:bg-indigo-500 hover:text-white font-medium rounded-md duration-200 text-lg"
       >
-        Coming Soon
-      </div>
+        Profile
+      </router-link>
     </div>
     <div>
       <div
