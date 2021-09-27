@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-indigo-500  bg-opacity-70 px-3 py-4 rounded border-l-8 border-indigo-500 flex justify-between items-center"
+    class="bg-indigo-500  bg-opacity-70 px-3 py-4 rounded-lg border-l-8 border-indigo-500 flex justify-between items-center"
   >
     <div>
       <div class="text-lg font-medium text-white">Become a member</div>
