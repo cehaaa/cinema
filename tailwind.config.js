@@ -23,6 +23,7 @@ module.exports = {
       scale: ["active", "group-hover"],
       visibility: ["hover", "group-hover"],
       width: ["hover", "focus"],
+      ringWidth: ["hover", "active"],
     },
   },
 };
