@@ -29,10 +29,10 @@
         Popular Now
       </div>
       <router-link
-        to="/profile"
+        to="/settings/profile"
         class="p-3 cursor-pointer hover:bg-indigo-500 hover:text-white font-medium rounded-md duration-200 text-lg"
       >
-        Profile
+        Settings
       </router-link>
     </div>
     <div>
