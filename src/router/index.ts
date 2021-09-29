@@ -16,9 +16,9 @@ const routes: Array<RouteRecordRaw> = [
     component: Home
   },
   {
-    path : '/settings',
-    name : 'Settings',
+    path : '/settings',    
     component : Settings,
+    name: 'Settings',
     children : [
       {
         path : 'profile',
@@ -35,8 +35,8 @@ const routes: Array<RouteRecordRaw> = [
     ]
   },
   {
-    path : '*',
-    redirect : Home
+    path : '/:pathMatch(.*)*',
+    component : Home,
   }
 ]
 
