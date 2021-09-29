@@ -9,7 +9,7 @@
       <router-link
         to="/"
         class="p-3 cursor-pointer hover:bg-indigo-500 hover:text-white font-medium rounded-md duration-200 text-lg"
-        :class="{ 'bg-indigo-500 , text-white': checkRouteName() === 'Home' }"
+        active-class="bg-indigo-500 text-white"
       >
         Home
       </router-link>
@@ -29,8 +29,9 @@
         Popular Now
       </div>
       <router-link
-        to="/settings/profile"
+        to="/settings"
         class="p-3 cursor-pointer hover:bg-indigo-500 hover:text-white font-medium rounded-md duration-200 text-lg"
+        active-class="bg-indigo-500 text-white"
       >
         Settings
       </router-link>
@@ -60,12 +61,7 @@
 </template>
 
 <script lang="ts">
-import { checkRouteName } from "@/utils/utils";
-
 export default {
   name: "Sidebar",
-  setup() {
-    return { checkRouteName };
-  },
 };
 </script>

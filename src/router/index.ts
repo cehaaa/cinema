@@ -18,7 +18,8 @@ const routes: Array<RouteRecordRaw> = [
   {
     path : '/settings',    
     component : Settings,
-    name: 'Settings',
+    name: 'Settings',    
+    redirect: '/settings/profile',
     children : [
       {
         path : 'profile',
