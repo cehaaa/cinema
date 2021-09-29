@@ -9,7 +9,7 @@
 
         'border-red-500': status === 'danger',
         'border-indigo-500': status === 'primary',
-        'border-green-400': status === 'success',
+        'border-green-500': status === 'success',
 
         'animate-fadeLeft, right-0': isAlerted,
         '-right-80': !isAlerted,
