@@ -36,7 +36,7 @@
           </router-link>
         </div>
       </div>
-      <div class=" w-full">
+      <div class="w-full">
         <router-view />
       </div>
     </div>

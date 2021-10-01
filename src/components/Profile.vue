@@ -59,7 +59,7 @@
       <textarea
         rows="5"
         type="text"
-        class="w-full outline-none p-3 rounded-lg mt-1 bg-gray-200 hover:bg-white duration-200 hover:ring-4 ring-opacity-30 ring-indigo-500"
+        class="w-full outline-none p-3 rounded-lg mt-1 bg-gray-200 hover:bg-white duration-200 hover:ring-4 ring-opacity-30 ring-indigo-500 resize-none"
         value="Bio goes here..."
       />
     </div>
