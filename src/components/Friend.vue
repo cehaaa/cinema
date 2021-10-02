@@ -65,7 +65,7 @@ export default {
 
     onMounted(() => {
       store.dispatch("users-store/fetchFriends");
-      store.dispatch("users-store/fetfetchSuggestedFriendsch");
+      store.dispatch("users-store/fetchSuggestedFriends");
     });
 
     const friends = computed(() => store.getters["users-store/friends"]);
