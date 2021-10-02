@@ -5,7 +5,7 @@ import Settings from '../views/Settings.vue'
 import NotFound from '@/views/NotFound.vue'
 
 import Profile from '@/components/Profile.vue'
-import WatchList from '@/components/WatchList.vue'
+import WatchLater from '@/components/WatchLater.vue'
 import Friend from '@/components/Friend.vue'
 
 
@@ -26,8 +26,8 @@ const routes: Array<RouteRecordRaw> = [
         component : Profile,
       },
       {
-        path : 'watch-list',
-        component : WatchList
+        path : 'watch-later',
+        component : WatchLater
       },
       {
         path : 'friends',

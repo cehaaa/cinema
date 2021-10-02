@@ -32,7 +32,7 @@
             >
               <button
                 class="rounded-full h-10 w-10 p-1 bg-indigo-500 flex items-center justify-center hover:bg-indigo-600 duration-200"
-                @click="openAlert"
+                @click="addToWatchLater(movie)"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -112,7 +112,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { ref, onMounted, computed } from "vue";
 import { useStore } from "vuex";
 import Alert from "@/components/Alert";
@@ -124,6 +124,7 @@ export default {
   },
   setup() {
     const store = useStore();
+    const isAlerted = ref(false);
 
     onMounted(() => {
       store.dispatch("movies-store/fetchOnShowingMovies");
@@ -133,7 +134,10 @@ export default {
       () => store.getters["movies-store/onShowingMovies"]
     );
 
-    const isAlerted = ref(false);
+    const addToWatchLater = (data: any) => {
+      openAlert();
+      store.dispatch("watch-later-store/addToWatchLater", data);
+    };
 
     const openAlert = () => {
       isAlerted.value = true;
@@ -150,7 +154,7 @@ export default {
       }, 2500);
     };
 
-    return { movies, isAlerted, openAlert, closeAlert };
+    return { movies, isAlerted, openAlert, closeAlert, addToWatchLater };
   },
 };
 </script>

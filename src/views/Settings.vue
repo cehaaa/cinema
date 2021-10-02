@@ -19,11 +19,11 @@
         </div>
         <div class="py-3">
           <router-link
-            to="/settings/watch-list"
+            to="/settings/watch-later"
             active-class="text-indigo-500"
             class="flex items-center space-x-5 text-lg transform hover:translate-x-2 duration-200 text-gray-500 font-medium hover:text-indigo-500"
           >
-            Wish List
+            Watch Later
           </router-link>
         </div>
         <div class="py-3">
