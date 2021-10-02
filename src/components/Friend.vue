@@ -46,7 +46,7 @@
           <button
             class="bg-gray-400 w-full text-white rounded-lg mt-3 py-3 hover:bg-gray-300 font-medium duration-200 text-lg"
           >
-            Hapus
+            Delete
           </button>
         </div>
       </div>
