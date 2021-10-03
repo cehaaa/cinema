@@ -2,7 +2,7 @@
   <div>
     <div class="text-2xl font-medium">Watch Later</div>
 
-    <div class="grid grid-cols-3 gap-3 mt-4" v-if="watchLater">
+    <div class="grid grid-cols-3 gap-3 mt-4" v-if="watchLater.length > 0">
       <div
         v-for="item in watchLater"
         :key="item.id"
@@ -45,7 +45,7 @@
         </div>
       </div>
     </div>
-    <div class="flex mt-4 justify-center items-center" v-else>
+    <div v-else class="flex mt-4 justify-center items-center">
       <div class="text-center flex items flex-col items-center space-y-2">
         <img src="@/assets/img/empty_history.png" alt="" />
         <div>
@@ -77,8 +77,6 @@ export default {
     const watchLater = computed(
       () => store.getters["watch-later-store/watchLater"]
     );
-
-    console.log(watchLater);
 
     return {
       watchLater,
