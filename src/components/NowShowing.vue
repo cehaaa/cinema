@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class="mt-6">
-      <div class="grid grid-cols-4 gap-3">
+      <div class="grid grid-cols-1 sm:grid-cols-4 gap-3">
         <div
           class="group cursor-pointer"
           v-for="(movie, index) in movies"
@@ -25,7 +25,7 @@
               :src="
                 'http://localhost:3000/storage/banner/' + movie.movie_banner
               "
-              class="w-full object-cover object-center h-80"
+              class="w-full object-cover object-top md:object-center h-80"
             />
             <div
               class="absolute p-3 bottom-0 right-0 invisible group-hover:visible flex space-x-2"

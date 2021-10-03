@@ -1,12 +1,16 @@
 <template>
-  <div class="flex items-center justify-between w-full">
+  <div
+    class="flex md:items-center md:justify-between w-full flex-col md:flex-row space-y-5 md:space-y-0"
+  >
     <div>
       <div class="text-3xl font-bold">Hello, {{ username }}! 👋</div>
       <div class="text-gray-500 mt-2">
         Welcome back and explore the movie.
       </div>
     </div>
-    <div class="flex items-center space-x-7">
+    <div
+      class="flex items-center md:space-x-7 justify-between md:justify-start"
+    >
       <input
         type="text"
         class="rounded-full px-5 w-64 py-3 outline-none focus:ring-4 ring-indigo-500 ring-opacity-20 duration-200"

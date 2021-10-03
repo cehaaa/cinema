@@ -1,13 +1,15 @@
 <template>
   <div class="flex h-screen w-screen select-none">
-    <div class="w-56 overflow-x-hidden py-3 px-3 flex-none">
+    <div
+      class="w-56 overflow-x-hidden py-3 px-3 flex-none hidden lg:inline-block"
+    >
       <Sidebar />
     </div>
-    <div class="flex-grow overflow-auto hide-scroll-bar py-3">
+    <div class="flex-grow overflow-auto hide-scroll-bar lg:py-3">
       <router-view />
     </div>
     <div
-      class="w-60 overflow-x-hidden py-3 px-3 flex-none hide-scroll-bar duration-200"
+      class="w-60 overflow-x-hidden py-3 px-3 flex-none hide-scroll-bar hidden lg:inline-block"
       v-if="rightSidebar"
     >
       <FriendActivity />

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-white fixed w-96 p-5 rounded-lg top-28 right-64 mr-1 shadow"
+    class="bg-white fixed w-96 p-5 rounded-lg top-40 lg:top-28 right-5 lg:right-64 mr-1 shadow"
     :class="{ hidden: !isShow }"
   >
     <div class="flex justify-between">
