@@ -3,7 +3,7 @@
     <div class="flex items-center justify-between">
       <!-- heading -->
       <div>
-        <div class="text-2xl font-semibold">Now Showing 🍿</div>
+        <div class="text-2xl font-semibold">Now Showing</div>
       </div>
       <div>
         <a
@@ -14,9 +14,9 @@
       </div>
     </div>
     <div class="mt-6">
-      <div class="grid grid-cols-1 sm:grid-cols-4 gap-3">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
         <div
-          class="group cursor-pointer"
+          class="cursor-pointer"
           v-for="(movie, index) in movies"
           :key="movie[index]"
         >
@@ -25,53 +25,34 @@
               :src="
                 'http://localhost:3000/storage/banner/' + movie.movie_banner
               "
-              class="w-full object-cover object-top md:object-center h-80"
+              class="w-full object-cover object-top md:object-center h-80 lg:h-full"
             />
-            <div
-              class="absolute p-3 bottom-0 right-0 invisible group-hover:visible flex space-x-2"
+
+            <button
+              class="p-2 rounded-md bg-indigo-500 group bg-opacity-80 duration-200 absolute top-0 right-0 m-3"
+              @click="addToWatchLater(movie)"
             >
-              <button
-                class="rounded-full h-10 w-10 p-1 bg-indigo-500 flex items-center justify-center hover:bg-indigo-600 duration-200"
-                @click="addToWatchLater(movie)"
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"
-                  />
-                </svg>
-              </button>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 4v16m8-8H4"
+                />
+              </svg>
+            </button>
+
+            <div class="absolute p-3 bottom-0 w-full">
               <button
-                class="rounded-full h-10 w-10 p-1 bg-indigo-500 flex items-center justify-center hover:bg-indigo-600 duration-200"
+                class="bg-indigo-500 hover:bg-indigo-600 duration-200 text-white font-medium w-full py-2 rounded"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
-                  />
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
+                Watch now
               </button>
             </div>
           </div>
@@ -115,7 +96,7 @@
 <script lang="ts">
 import { ref, onMounted, computed } from "vue";
 import { useStore } from "vuex";
-import Alert from "@/components/Alert";
+import Alert from "@/components/Alert.vue";
 
 export default {
   name: "now-showing",
