@@ -5,7 +5,7 @@
     >
       <Sidebar />
     </div>
-    <div class="flex-grow overflow-auto hide-scroll-bar lg:py-3">
+    <div class="flex-grow overflow-auto hide-scroll-bar">
       <router-view />
     </div>
     <div
