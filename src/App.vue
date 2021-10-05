@@ -1,5 +1,5 @@
 <template>
-  <div class="flex h-screen w-screen select-none">
+  <div class="flex h-screen w-screen select-none bg-gray-900 text-gray-300">
     <div
       class="w-56 overflow-x-hidden py-3 px-3 flex-none hidden lg:inline-block"
     >

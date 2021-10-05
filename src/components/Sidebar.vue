@@ -8,37 +8,37 @@
     <div class="flex flex-col flex-grow space-y-3">
       <router-link
         to="/"
-        class="p-3 cursor-pointer hover:bg-indigo-500 hover:text-white font-medium rounded-md duration-200 text-lg"
-        active-class="bg-indigo-500 text-white"
+        class="p-3 cursor-pointer hover:bg-pink-500 hover:text-white font-medium rounded-md duration-200 text-lg"
+        active-class="bg-pink-600 text-white"
       >
         Home
       </router-link>
       <div
-        class="p-3 cursor-pointer hover:bg-indigo-500 hover:text-white font-medium rounded-md duration-200 text-lg"
+        class="p-3 cursor-pointer hover:bg-pink-600 hover:text-white font-medium rounded-md duration-200 text-lg"
       >
         For You
       </div>
       <div
-        class="p-3 cursor-pointer hover:bg-indigo-500 hover:text-white font-medium rounded-md duration-200 text-lg"
+        class="p-3 cursor-pointer hover:bg-pink-600 hover:text-white font-medium rounded-md duration-200 text-lg"
       >
         Drama
       </div>
       <div
-        class="p-3 cursor-pointer hover:bg-indigo-500 hover:text-white font-medium rounded-md duration-200 text-lg"
+        class="p-3 cursor-pointer hover:bg-pink-600 hover:text-white font-medium rounded-md duration-200 text-lg"
       >
         Popular Now
       </div>
       <router-link
         to="/settings"
-        class="p-3 cursor-pointer hover:bg-indigo-500 hover:text-white font-medium rounded-md duration-200 text-lg"
-        active-class="bg-indigo-500 text-white"
+        class="p-3 cursor-pointer hover:bg-pink-500 hover:text-white font-medium rounded-md duration-200 text-lg"
+        active-class="bg-pink-600 text-white"
       >
         Settings
       </router-link>
     </div>
     <div>
       <div
-        class="p-3 cursor-pointer bg-gray-200 hover:bg-red-600 hover:text-white font-medium rounded-md duration-200  flex space-x-3 items-center"
+        class="p-3 cursor-pointer bg-gray-800 hover:bg-red-600 hover:text-white font-medium rounded-md duration-200  flex space-x-3 items-center"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
