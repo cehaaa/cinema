@@ -1,11 +1,12 @@
 <template>
-  <div class="rounded-xl bg-indigo-50 py-8 px-5">
-    <SearchMovies />
-    <div class=" mt-10">
+  <div class="bg-gray-800 py-11 px-5">
+    <!-- <SearchMovies /> -->
+    <div class="text-3xl font-semibold">Discovers</div>
+    <div class="mt-7">
       <BestMovies />
     </div>
     <div class="mt-10">
-      <NowShowing />
+      <!-- <NowShowing /> -->
     </div>
   </div>
 </template>
