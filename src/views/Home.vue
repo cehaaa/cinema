@@ -3,10 +3,10 @@
     <!-- <SearchMovies /> -->
     <div class="text-3xl font-semibold">Discovers</div>
     <div class="mt-7">
-      <BestMovies />
+      <PopularMovies />
     </div>
     <div class="mt-10">
-      <!-- <NowShowing /> -->
+      <NowShowing />
     </div>
   </div>
 </template>
@@ -14,14 +14,14 @@
 <script>
 import { ref } from "vue";
 import SearchMovies from "@/components/SearchMovies.vue";
-import BestMovies from "@/components/BestMovies.vue";
+import PopularMovies from "@/components/PopularMovies.vue";
 import NowShowing from "@/components/NowShowing.vue";
 
 export default {
   name: "home",
   components: {
     SearchMovies,
-    BestMovies,
+    PopularMovies,
     NowShowing,
   },
   setup() {

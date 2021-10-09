@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div>
     <div class="flex items-center justify-between">
       <!-- heading -->
       <div class="flex items-center justify-between w-full">
@@ -95,7 +95,7 @@ import { useStore } from "vuex";
 import Alert from "@/components/Alert.vue";
 
 export default {
-  name: "best-movies",
+  name: "popular-movies",
   components: {
     Alert,
   },
