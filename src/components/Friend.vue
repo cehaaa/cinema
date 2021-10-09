@@ -5,7 +5,7 @@
       <div
         v-for="friend in friends"
         :key="friend"
-        class="group cursor-pointer border border-gray-300 rounded"
+        class="group cursor-pointer border border-gray-600 rounded overflow-hidden"
       >
         <div class="overflow-hidden">
           <img
@@ -17,6 +17,16 @@
         </div>
         <div class="p-3">
           <div class="text-lg font-medium">{{ friend.name }}</div>
+          <button
+            class="bg-pink-600 w-full text-white rounded-lg mt-3 py-3 hover:bg-pink-500 font-medium duration-200 text-lg"
+          >
+            Profile
+          </button>
+          <button
+            class="bg-gray-600 w-full text-white rounded-lg mt-3 py-3 hover:bg-gray-500 font-medium duration-200 text-lg"
+          >
+            Remove
+          </button>
         </div>
       </div>
     </div>
@@ -26,7 +36,7 @@
       <div
         v-for="friend in suggestedFriends"
         :key="friend"
-        class="group cursor-pointer border border-gray-300 rounded"
+        class="group cursor-pointer rounded overflow-hidden border border-gray-600"
       >
         <div class="overflow-hidden">
           <img
@@ -39,14 +49,14 @@
         <div class="p-3">
           <div class="text-lg font-medium">{{ friend.name }}</div>
           <button
-            class="bg-indigo-500 w-full text-white rounded-lg mt-3 py-3 hover:bg-indigo-600 font-medium duration-200 text-lg"
+            class="bg-pink-600 w-full text-white rounded-lg mt-3 py-3 hover:bg-pink-500 font-medium duration-200 text-lg"
           >
             Add Friend
           </button>
           <button
-            class="bg-gray-400 w-full text-white rounded-lg mt-3 py-3 hover:bg-gray-300 font-medium duration-200 text-lg"
+            class="bg-gray-600 w-full text-white rounded-lg mt-3 py-3 hover:bg-gray-500 font-medium duration-200 text-lg"
           >
-            Delete
+            Remove
           </button>
         </div>
       </div>
