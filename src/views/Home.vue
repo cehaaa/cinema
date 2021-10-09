@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-800 py-11 px-5">
+  <div class="bg-gray-800 pt-8 pb-3 px-5">
     <!-- <SearchMovies /> -->
     <div class="text-3xl font-semibold">Discovers</div>
     <div class="mt-7">
