@@ -59,7 +59,7 @@ export default {
     NotificationModal,
   },
   setup() {
-    const username = ref("Jeremy");
+    const username = ref("Mina");
     const isShow = ref(false);
 
     const showNotificationModal = () => {
