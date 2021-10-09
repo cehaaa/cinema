@@ -24,6 +24,7 @@ module.exports = {
       visibility: ["hover", "group-hover"],
       width: ["hover", "focus"],
       ringWidth: ["hover", "active"],
+      inset: ["group-hover"],
     },
   },
 };
