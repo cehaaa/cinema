@@ -2,7 +2,7 @@
   <div class="w-36 relative">
     <div class="absolute right-0 bottom-0 mr-2 mb-2">
       <button
-        class="bg-indigo-500 hover:bg-indigo-600 duration-200 cursor-pointer rounded-full w-full h-full flex items-center justify-center p-2"
+        class="bg-gray-700 hover:bg-gray-600 duration-200 cursor-pointer rounded-full w-full h-full flex items-center justify-center p-2"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +38,7 @@
       </div>
       <input
         type="text"
-        class="w-full outline-none p-3 rounded-lg mt-1 bg-gray-200 hover:bg-white duration-200 hover:ring-4 ring-opacity-30 ring-indigo-500"
+        class="w-full outline-none p-3 rounded-lg mt-1 bg-gray-600 hover:bg-white duration-200 hover:ring-4 hover:text-gray-800 font-medium ring-pink-300"
         value="Myoui Mina"
       />
     </div>
@@ -48,7 +48,7 @@
       </div>
       <input
         type="text"
-        class="w-full outline-none p-3 rounded-lg mt-1 bg-gray-200 hover:bg-white duration-200 hover:ring-4 ring-opacity-30 ring-indigo-500"
+        class="w-full outline-none p-3 rounded-lg mt-1 bg-gray-600 hover:bg-white duration-200 hover:ring-4 hover:text-gray-800 font-medium ring-pink-300"
         value="Jakarta, Indonesia"
       />
     </div>
@@ -59,18 +59,18 @@
       <textarea
         rows="5"
         type="text"
-        class="w-full outline-none p-3 rounded-lg mt-1 bg-gray-200 hover:bg-white duration-200 hover:ring-4 ring-opacity-30 ring-indigo-500 resize-none"
+        class="w-full outline-none p-3 rounded-lg mt-1 bg-gray-600 hover:bg-white duration-200 hover:ring-4 hover:text-gray-800 font-medium ring-pink-300 resize-none"
         value="Bio goes here..."
       />
     </div>
     <div class="flex space-x-3">
       <button
-        class="p-3 w-36 text-white font-medium rounded-lg bg-indigo-500 hover:bg-indigo-600 duration-200"
+        class="p-3 w-36 text-white font-medium rounded-lg bg-pink-600 hover:bg-pink-500 duration-200"
       >
         Save
       </button>
       <button
-        class="p-3 w-36 text-white font-medium rounded-lg bg-gray-300 hover:bg-gray-400 duration-200"
+        class="p-3 w-36 text-white font-medium rounded-lg bg-gray-600 hover:bg-gray-400 duration-200"
       >
         Cancel
       </button>

@@ -1,6 +1,6 @@
 module.exports = {
   purge: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: "media", // or 'media' or 'class'
   theme: {
     extend: {
       animation: {
@@ -24,6 +24,8 @@ module.exports = {
       visibility: ["hover", "group-hover"],
       width: ["hover", "focus"],
       ringWidth: ["hover", "active"],
+      inset: ["group-hover"],
+      opacity: ["group-hover"],
     },
   },
 };
