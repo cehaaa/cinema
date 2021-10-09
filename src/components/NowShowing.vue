@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="flex items-center justify-between">
-      <div class="text-2xl font-semibold">Popular Movies</div>
+      <div class="text-2xl font-semibold">Now Showing</div>
       <div
         class="text-gray-500 mt-2 cursor-pointer font-medium hover:text-pink-600 duration-200"
       >
@@ -23,12 +23,12 @@
               class="object-cover object-center w-full rounded-md"
             />
             <div
-              class="absolute w-full p-2 bg-gradient-to-t from-black text-base -bottom-12 group-hover:bottom-0 duration-200 flex justify-between items-center"
+              class="absolute w-full px-2 pb-4 pt-40 bg-gradient-to-t from-black text-base -bottom-12 group-hover:bottom-0 duration-200 flex justify-between items-center opacity-0 group-hover:opacity-100"
             >
               <div class="font-medium">{{ movie.title }}</div>
               <div>
                 <button
-                  class="bg-pink-600 p-1 rounded hover:bg-pink-700"
+                  class="bg-pink-600 p-2 rounded-md hover:bg-pink-700"
                   @click="addToWatchLater(movie)"
                 >
                   <svg
