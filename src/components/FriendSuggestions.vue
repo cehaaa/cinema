@@ -1,51 +1,45 @@
 <template>
-  <div class="flex flex-col space-y-2">
-    <div class="font-medium">People you may know</div>
-    <div
-      class="border p-3 rounded-xl flex items-center justify-between"
-      v-for="user in suggestedFriends"
-      :key="user.id"
-    >
-      <div class="flex items-center space-x-3">
-        <div class="relative">
-          <div class="rounded-full overflow-hidden">
-            <img
-              :src="
-                'http://localhost:3000/storage/profile/' + user.profile_image
-              "
-              class="object-cover object-top w-11 h-11"
-            />
-          </div>
-          <div
-            :class="{
-              'bg-green-400': user.online_status,
-              'bg-red-500': !user.online_status,
-            }"
-            class="w-3 h-3 rounded-full bottom-0 right-0 mt-1 ml-5 absolute"
-          ></div>
-        </div>
-        <div class="font-medium text-lg">{{ user.name }}</div>
+  <div class="flex flex-col space-y-2 pb-3 pt-3">
+    <div class="px-3">
+      <div class="font-medium text-lg">People you may know</div>
+      <div class="text-sm text-gray-500 mt-1">
+        Find a new friend here
       </div>
-      <div>
-        <button
-          class="p-1 rounded-md hover:bg-indigo-500 group hover:bg-opacity-30 duration-200"
-          @click="openAlert"
+    </div>
+
+    <div class="flex flex-col">
+      <div v-for="friend in suggestedFriends" :key="friend">
+        <div
+          class="px-2 py-3 duration-200 flex w-full justify-between items-center group hover:bg-gray-700"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5 text-indigo-600 "
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-            />
-          </svg>
-        </button>
+          <div class="flex items-center space-x-2">
+            <div class="rounded-full relative">
+              <img
+                :src="
+                  'http://localhost:3000/storage/profile/' +
+                    friend.profile_image
+                "
+                class="object-cover object-top w-10 h-10 rounded-full"
+              />
+              <div
+                class="absolute w-3 h-3 rounded-full bottom-0 right-0"
+                :class="{
+                  'bg-green-400': friend.online_status,
+                  'bg-red-500': !friend.online_status,
+                }"
+              ></div>
+            </div>
+            <div>{{ friend.name }}</div>
+          </div>
+          <div>
+            <button
+              class="py-1 px-3 rounded group-hover:bg-pink-600 duration-200 border border-pink-600 text-sm"
+              @click="openAlert"
+            >
+              Invite
+            </button>
+          </div>
+        </div>
       </div>
     </div>
 
