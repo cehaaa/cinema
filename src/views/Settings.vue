@@ -1,36 +1,32 @@
 <template>
-  <div class="rounded-xl pb-8 px-5 bg-indigo-50">
-    <div class="pt-8">
-      <PremiumBanner />
-    </div>
+  <div class="bg-gray-800 pt-8 pb-3 px-5 min-h-full">
+    <PremiumBanner />
 
-    <div class="flex w-full pt-8">
-      <div
-        class="w-1/3 mr-10 divide-y divide-solid divide-gray-300 border-r border-gray-300"
-      >
-        <div class="py-3">
+    <div class="flex w-full min-h-full pt-8">
+      <div class="w-1/3 flex space-y-4 flex-col">
+        <div>
           <router-link
             to="/settings/profile"
-            active-class="text-indigo-500 active"
-            class="flex items-center space-x-5 text-lg transform hover:translate-x-2 duration-200 text-gray-500 font-medium hover:text-indigo-500"
+            active-class="text-pink-500 active"
+            class="flex items-center space-x-5 text-base transform hover:translate-x-2 duration-200 text-gray-500 font-medium hover:text-pink-500"
           >
             Profile
           </router-link>
         </div>
-        <div class="py-3">
+        <div>
           <router-link
             to="/settings/watch-later"
-            active-class="text-indigo-500"
-            class="flex items-center space-x-5 text-lg transform hover:translate-x-2 duration-200 text-gray-500 font-medium hover:text-indigo-500"
+            active-class="text-pink-500"
+            class="flex items-center space-x-5 text-base transform hover:translate-x-2 duration-200 text-gray-500 font-medium hover:text-pink-500"
           >
             Watch Later
           </router-link>
         </div>
-        <div class="py-3">
+        <div>
           <router-link
             to="/settings/friends"
-            active-class="text-indigo-500"
-            class="flex items-center space-x-5 text-lg transform hover:translate-x-2 duration-200 text-gray-500 font-medium hover:text-indigo-500"
+            active-class="text-pink-500"
+            class="flex items-center space-x-5 text-base transform hover:translate-x-2 duration-200 text-gray-500 font-medium hover:text-pink-500"
           >
             Friends
           </router-link>
